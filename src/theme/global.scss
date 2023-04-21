@@ -86,11 +86,20 @@ header {
             .remember {
                 display: flex;
                 justify-content: space-between;
+                
+                .rem-me{
+                    display: flex;
+                    align-items: center;
+
+                    input{
+                        margin-right: 10px;
+                    }
+                }
             }
 
             p.sign-up-text {
                 margin-top: 35px;
-                text-align: center;
+                text-align: left;
             }
         }
     }
@@ -234,6 +243,27 @@ header {
                 color: #64748B;
                 margin-top: 8px;
                 display: block;
+            }
+
+            &.program{
+                h3{
+                    color: #9B51E0;
+                }
+            }
+            &.document{
+                h3{
+                    color: #6FCF97;
+                }
+            }
+            &.review{
+                h3{
+                    color: #2D9CDB;
+                }
+            }
+            &.unreview{
+                h3{
+                    color: #F2994A;
+                }
             }
         }
     }
