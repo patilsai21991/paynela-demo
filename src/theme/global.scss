@@ -291,7 +291,7 @@ header {
         }
 
         .select {
-            width: 210px;
+            min-width: 210px;
             position: relative;
 
             ul {
@@ -407,12 +407,16 @@ header {
     }
 
     .filter-clear{
-        margin-top: 0;
+        margin-top: -40px;
         margin-left: 20px;
     }
 
     .btn-secondary{
         height: auto !important;
+    }
+
+    .select{
+        min-width: 313px;
     }
 }
 

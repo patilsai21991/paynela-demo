@@ -15,7 +15,7 @@ $("body").on("click", ".popout_info > a", function (event) {
   }
 });
 
-$("body").on("click", "td a div.print-file", function(event){
+$("body").on("click", "div div.print-file", function(event){
   var w = window.open($(this).attr('data-src'));
   w.print();
 });
