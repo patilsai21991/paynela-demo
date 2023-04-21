@@ -8,7 +8,7 @@
     // -moz-box-shadow: 0px 1px 0 #006577, 0px -1px 0 #006577;
 }
 .select ul li.option:hover {
-    background-color: rgba(145, 154, 167, 0.16);
+    background-color: #e9e8e8;
 }
 .select ul li.option {
     z-index:1;
@@ -38,5 +38,18 @@
         right: 10px;
         top: 18px;
         transform: rotate(180deg);
+    }
+}
+
+.active-select{
+    z-index: 9999 !important;
+}
+
+.select {
+    position: relative;
+    min-height: 80px;
+
+    ul{
+        position: absolute;
     }
 }

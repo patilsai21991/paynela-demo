@@ -16,6 +16,8 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { ProgramComponent } from './Components/program/program.component';
 import { DocumentListComponent } from './Components/document-list/document-list.component';
 import { FindAssignComponent } from './Components/find-assign/find-assign.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { FindAssignComponent } from './Components/find-assign/find-assign.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

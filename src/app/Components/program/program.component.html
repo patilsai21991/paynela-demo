@@ -1,15 +1,69 @@
 <div class="main-container">
     <app-header></app-header>
     <div class="content-wrapper">
-        <app-sidebar></app-sidebar>
+        <div id="sidebar-menu">
+            <div class="module">
+                <span class="menu-title"><img src="assets/icons/menu-document-icon.svg" alt="document-menu"> Document Review</span>
+                <ul>
+                    <li>
+                        <a routerLink="/dashboard" class="active">Document Dashboard</a>
+                    </li>
+                    <li>
+                        <a routerLink="/find-assign">Find/Assign</a>
+                    </li>
+                    <li>
+                        <a routerLink="/document-list">List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <app-sidebar></app-sidebar> -->
         <div class="content-area">
             
             <div class="dashboard">
                 <h1 class="container-title">Document Dashboard: Selected Program</h1>
                 <div class="container-card card">
                     <h2>List of Program A</h2>
+
+                    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8"  matSort #empTbSort="matSort">
+
+                        <!--- Note that these columns can be defined in any order.
+                              The actual rendered columns are set as a property on the row definition" -->
+                              displayedColumns: string[] = ['program', 'totalDocument', 'reviewedDocument', 'unreviewedDocument', 'details'];
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="program">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header> Program </th>
+                          <td mat-cell *matCellDef="let element"> <a routerLink="/program">{{element.program}}</a> </td>
+                        </ng-container>
+                      
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="totalDocument">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header>  Total Documents </th>
+                          <td mat-cell *matCellDef="let element"> {{element.totalDocument}} </td>
+                        </ng-container>
+                      
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="reviewedDocument">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header> Reviewed Documents </th>
+                          <td mat-cell *matCellDef="let element"> {{element.reviewedDocument}} </td>
+                        </ng-container>
+                      
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="unreviewedDocument">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header> Un-Reviewed Documents </th>
+                          <td mat-cell *matCellDef="let element">  <a routerLink="/document-list">{{element.unreviewedDocument}}</a> </td>
+                        </ng-container>
             
-                    <table>
+                        <ng-container matColumnDef="details">
+                            <th mat-header-cell *matHeaderCellDef> Action </th>
+                            <td mat-cell *matCellDef="let element"> <a routerLink="/document-list"><button class="table-action-btn">Details</button></a> </td>
+                          </ng-container>
+                      
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                      </table>
+            
+                    <!-- <table>
                         <thead>
                             <tr>
                                 <th>
@@ -202,7 +256,7 @@
                             </tr>
                             
                         </tbody>
-                    </table>
+                    </table> -->
                 </div>
             </div>            
 
