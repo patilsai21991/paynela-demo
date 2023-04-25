@@ -62,7 +62,7 @@ $("body").on("click",".payment-card input[type='radio']", function(event){
   $('.issue-check input[type="radio"]').prop('checked', false);
   $('.issue-check .filter-clear').addClass('disabled').prop("disabled", true);
   $('.payment-card .btn-secondary').prop("disabled", false).removeClass('disabled');
-  $('.select li').prop("disabled", true).addClass('disabled');
+  $('.issue-check .select li').prop("disabled", true).addClass('disabled');
 })
 
 $("body").on("click",".issue-check input[type='radio']", function(event){
@@ -70,5 +70,5 @@ $("body").on("click",".issue-check input[type='radio']", function(event){
   $('.payment-card .btn-secondary').addClass('disabled').prop("disabled", true);
   $('.issue-check .filter-clear').prop("disabled", false).removeClass('disabled');
   $('#user').prop('onclick',null).off('click');
-  $('.select li').prop("disabled", false).removeClass('disabled');
+  $('.issue-check .select li').prop("disabled", false).removeClass('disabled');
 })

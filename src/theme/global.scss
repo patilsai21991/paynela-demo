@@ -436,6 +436,12 @@ header {
         display: block;
         color: #7D7D7D;
     }
+
+    &.payment-rejection{
+        .select{
+            min-width: 330px;
+        }
+    }
 }
 
 .find-assign {
