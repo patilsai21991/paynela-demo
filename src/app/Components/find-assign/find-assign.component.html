@@ -22,7 +22,7 @@
 
             <div class="dashboard">
                 <h1 class="container-title">Document Find/Assign/Adjudicate</h1>
-                <div class="container-card card">
+                <div class="container-card card find-assign-card">
                     <h2>Document Overview</h2>
                     <table class="pt-0">
                         <thead>
@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="popout_list">
                                             <ul>
-                                            <li><a>Open Document</a></li>
+                                            <li><a><div data-src="assets/pdf/fax.pdf" class="print-file">Open Document</div></a></li>
                                             <li><a>Clone Document</a></li>
                                             <li><a>Review Fax Back Page</a></li>
                                             </ul>
@@ -114,15 +114,25 @@
                         </div>
                     </div>
 
+                    <hr class="card-hr">
+
                     <h2>Patient & Provider Info</h2>
                     <div class="doc-type-sec">
                         <div class="patient-info">
-                            <div class="search-patient">
+                            <div class="search-patient  autocomplete-input">
                                 <div class="info-row">
                                     <label class="input-label">Search Patient</label>
                                     <div class="field-row">
                                         <div class="input-field">
                                             <input type="text" placeholder="Type Name" />
+                                            <div class="input-text-autocomplete">
+                                                <ul>
+                                                    <li data-name="John Doe">Member ID #123456, John Doe, 123 Elm St., Highpark, NJ 08843</li>
+                                                    <li data-name="Donald">Member ID #123456, Donald, 123 Elm St., Highpark, NJ 08843</li>
+                                                    <li data-name="Mark">Member ID #123456, Mark, 123 Elm St., Highpark, NJ 08843</li>
+                                                    <li data-name="Steve">Member ID #123456, Steve 123 Elm St., Highpark, NJ 08843</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <button class="btn-find">Find</button>
                                     </div>
@@ -135,12 +145,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="search-patient">
+                            <div class="search-patient  autocomplete-input">
                                 <div class="info-row">
                                     <label class="input-label">Search Provider</label>
                                     <div class="field-row">
                                         <div class="input-field">
                                             <input type="text" placeholder="Provider Name/NPI" />
+                                            <div class="input-text-autocomplete">
+                                                <ul>
+                                                    <li data-name="Acme Clinic">Acme Clinic, 123 Main St, Edison, NJ 07743</li>
+                                                    <li data-name="Star Clinic">Star Clinic, 123 Main St, Edison, NJ 07743</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <button class="btn-find">Find</button>
                                     </div>
@@ -155,6 +171,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <hr class="card-hr">
 
                     <h2>Payment Info</h2>
                     <div class="doc-type-sec">
@@ -233,7 +251,7 @@
                                     <label class="input-label">Approved Amount</label>
                                     <div class="field-row">
                                         <div class="input-field">
-                                            <input type="number" placeholder="Approved Amount" />
+                                            <input type="number" placeholder="Approved Amount" class="approved-amt" />
                                         </div>
                                     </div>
                                 </div>
@@ -241,33 +259,36 @@
                         </div>
                     </div>
 
+                    <hr class="card-hr">
+
                     <h2>Payment Type & Approval</h2>
                     <div class="doc-type-sec payment-approval">
 
                         <div class="search-patient payment-option">
-                            <div class="info-row">
+                            <div class="info-row payment-card">
                                 <label class="input-label">Payment by</label>
                                 <div class="field-row">
-                                    <input type="radio" class="radio" /> Card <button class="btn-secondary">Load Patient <br>
-                                        Payment Card</button>
+                                    <input type="radio" class="radio" /> Card <button class="btn-secondary">Load Patient Payment Card</button>
                                 </div>
                             </div>
-                            <div class="info-row">
-                                <label class="input-label"></label>
-                                <div class="field-row">
-                                    <input type="radio" class="radio" /> Check
-                                </div>
-                            </div>
-                            <div class="info-row">
-                                <label class="input-label">Send To</label>
-                                <div class="field-row">
-                                    <div class="select">
-                                        <ul>
-                                            <li class="option dafault">Provider</li>
-                                            <li class="option">Patient</li>
-                                        </ul>
+                            <div class="issue-check" style="display: flex;">
+                                <div class="info-row">
+                                    <label class="input-label"></label>
+                                    <div class="field-row">
+                                        <input type="radio" class="radio" /> Check
                                     </div>
-                                    <button class="filter-clear">Issue Check</button>
+                                </div>
+                                <div class="info-row issue-check">
+                                    <label class="input-label">Send To</label>
+                                    <div class="field-row">
+                                        <div class="select">
+                                            <ul>
+                                                <li class="option dafault">Provider</li>
+                                                <li class="option">Patient</li>
+                                            </ul>
+                                        </div>
+                                        <button class="filter-clear">Issue Check</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -280,6 +301,7 @@
                         </div>
                     </div>
 
+                    <hr class="card-hr">
 
                     <h2>Payment Rejection</h2>
                     <div class="doc-type-sec">

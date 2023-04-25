@@ -1,0 +1,102 @@
+@media only screen and (max-width: 1280px) {
+    .find-assign-card{
+        table{
+            width: 100%;
+            padding: 24px;
+            
+            th {
+                font-size: 12px;
+                padding: 13px 0px 13px 6px !important;
+            }
+
+            td{
+                font-size: 12px;
+                padding: 13px 0px 13px 6px !important;
+            }
+        }
+    }
+
+    .find-assign .search-patient .input-field {
+        width: 250px;
+    }
+
+    .find-assign .field-row button.btn-find, .find-assign .field-row button.btn-secondary {
+        height: 41px;
+        margin-left: 20px;
+        line-height: 12px;
+    }
+
+    .find-assign textarea {
+        width: 282px;
+        font-size: 16px;
+    }
+
+    .find-assign .search-patient .input-field {
+        width: 230px;
+    }
+
+    .find-assign .highlight-payment{
+        input{
+            width: 200px;
+        }
+        
+        .field-row{
+            margin-right: 20px;
+        }
+    }
+
+    .payment-option {
+
+        .select {
+            min-width: 233px;
+            ul li.option{
+                width: 200px;
+            }
+        }
+
+        .btn-secondary{
+            white-space: nowrap;
+        }
+    }
+
+    .document-list-page{
+        .filter-row {
+            .filter-column{
+                .select{
+                    min-width: 150px !important;
+                    width: auto;
+                }
+            }
+        }
+        
+        .type .input-field input {
+            width: 140px;
+        }
+
+        .filter-column .input-field input{
+            width: 140px;
+        }
+    }
+
+    .content-wrapper .content-area {
+        width: calc(100vw - 272px);
+    }
+
+    .content-wrapper .dashboard-cards-row .card{
+        min-width: 150px;
+    }
+
+    .card{
+        margin: 40px;
+    }
+
+    .document-list-page{
+        table{
+            padding-top: 0px;
+
+            th,td{
+                padding: 13px 0px 13px 8px !important;
+            }
+        }
+    }
+  }

@@ -1,8 +1,10 @@
 $("body").on("click", ".select ul li.option", function (event) {
-  $(this).addClass('dafault');
   $('body').find('ul').removeClass('active-select')
   $(this).parent().addClass('active-select')
-  // $(this).closest('.select').addClass('active-select');
+  // $(this).closest('ul').append($(this))
+  var lis =  $(this).nextAll().addBack();
+  $(this).parent('ul').prepend(lis)
+  $(this).addClass('dafault');
   $(this).siblings().toggle().removeClass('dafault');
 });
 
@@ -19,3 +21,29 @@ $("body").on("click", "div div.print-file", function(event){
   var w = window.open($(this).attr('data-src'));
   w.print();
 });
+
+$("body").on("click", "div.autocomplete-input .input-field input", function(event){
+  event.stopPropagation()
+  $('.input-text-autocomplete').hide();
+  $(this).siblings('.input-text-autocomplete').show();
+});
+
+$("body").on("click", ".input-text-autocomplete li", function(event){
+  $(this).closest('.input-text-autocomplete').siblings('input').val($(this).attr('data-name'));
+  $('.input-text-autocomplete').hide();
+  sessionStorage.setItem('autocomplete-address', $(this).text());
+});
+
+$("body").on("click", "#wrapper", function(event){
+  $('.input-text-autocomplete').hide();
+});
+
+$("body").on("click", "div.autocomplete-input .btn-find", function(event){
+  let copyTxt = $(this).siblings('.input-field').find('input').val();
+  $(this).closest('div.autocomplete-input').find('.field-row textarea').html(sessionStorage.getItem('autocomplete-address'))
+  sessionStorage.removeItem('autocomplete-address')
+});
+
+$("body").on("change","input.approved-amt", function(event){
+  $(this).val().length > 0 ? $(this).addClass('input-active') : $(this).removeClass('input-active');
+})

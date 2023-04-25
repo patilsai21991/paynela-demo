@@ -19,9 +19,7 @@
     position: relative;
     font-weight: 700;
     font-size: 14px;
-}
-.select ul li:first-child {
-    display:block;
+    padding-left: 20px;
 }
 .select ul li {
     cursor:default;
@@ -51,5 +49,28 @@
 
     ul{
         position: absolute;
+        border: 1px solid #C0C0C0;
+        border-radius: 4px;
+
+        li.option{
+            color: #7D7D7D;
+            font-size: 14px;
+            font-weight: 500;
+            height: 18px;
+            line-height: 18px;
+            border: 0px;
+        }
     }
+}
+
+.select ul li.dafault {
+    display: block;
+    height: 40px !important;
+    border: 1px solid #C0C0C0 !important;
+    border-radius: 0;
+    line-height: 41px !important;
+    padding-left: 20px;
+    color: #464646;
+    font-weight: 700;
+    background-color: #e9e8e8;
 }

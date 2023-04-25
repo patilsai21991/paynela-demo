@@ -99,7 +99,8 @@ header {
 
             p.sign-up-text {
                 margin-top: 35px;
-                text-align: left;
+                text-align: center;
+                width: 378px;
             }
         }
     }
@@ -110,7 +111,7 @@ header {
     background-color: #f1f5f9;
 
     #sidebar-menu {
-        width: 280px;
+        width: 250px;
         background-color: $white;
         padding: 53px 26px;
         min-height: calc(100vh - 217px);
@@ -188,7 +189,7 @@ header {
 
     .content-area {
         // width: 100vw;
-        width: calc(100vw - 332px);;
+        width: calc(100vw - 262px);;
 
         >.card {
             margin-top: 30px;
@@ -209,6 +210,7 @@ header {
         display: flex;
         margin-left: 40px;
         margin-bottom: 40px;
+        margin-right: 40px;
 
         .card {
             margin: 0px;
@@ -216,6 +218,7 @@ header {
             min-height: 80px;
             min-width: 170px;
             padding: 20px;
+            width: 200px;
 
             h3 {
                 font-weight: 700;
@@ -407,7 +410,7 @@ header {
     }
 
     .filter-clear{
-        margin-top: -40px;
+        margin-top: -28px;
         margin-left: 20px;
     }
 
@@ -417,6 +420,11 @@ header {
 
     .select{
         min-width: 313px;
+    }
+
+    .payment-card{
+        border-right: 1px solid #D4D4D4;
+        margin-right: 20px;
     }
 }
 
