@@ -53,7 +53,7 @@ $("body").on("click", "div.autocomplete-input .btn-find", function(event){
 
 
 
-$("body").on("click","#login-component a", function(event){
+$("body").on("click","#login-component .submit", function(event){
   $('.sign-in').addClass('hide');
   $('.header-user-info').removeClass('hide');
 })

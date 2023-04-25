@@ -19,6 +19,22 @@ ul {
     color: $red;
 }
 
+.login-status-off{
+    .header-user-info{
+        display: none;
+    }
+}
+
+.login-status-on{
+
+    a.sign-in{
+        display: none;
+    }
+    .header-user-info{
+        display: flex;
+    }
+}
+
 header {
     height: 83pt;
     display: flex;
@@ -126,7 +142,7 @@ header {
         width: 50%;
         height: 100%;
 
-        form {
+        .form {
             margin-left: 140px;
             margin-top: 80px;
 

@@ -11,8 +11,10 @@ export class LoginComponent {
 
   constructor(private router: Router){}
 
-  redirect() {
+  onSubmit() {
     // alert('dad')
-    // this.router.navigate(['/dashboard']);
+    setTimeout(()=>{
+      this.router.navigate(['/dashboard']);
+    },1000)
   }
 }
