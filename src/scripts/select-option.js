@@ -17,8 +17,14 @@ $("body").on("click", ".popout_info > a", function (event) {
   }
 });
 
+// $("body").on("click", "div div.print-file", function(event){
+//   var w = window.open($(this).attr('data-src'));
+//   w.print();
+// });
+
 $("body").on("click", "div div.print-file", function(event){
-  var w = window.open($(this).attr('data-src'));
+  
+  var w = window.open($(this).closest('td').next('td').find('div.file-url').text());
   w.print();
 });
 
