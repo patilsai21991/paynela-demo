@@ -12,9 +12,8 @@ export class LoginComponent {
   constructor(private router: Router){}
 
   onSubmit() {
-    // alert('dad')
-    setTimeout(()=>{
+    // setTimeout(()=>{
       this.router.navigate(['/dashboard']);
-    },1000)
+    // },1000)
   }
 }
