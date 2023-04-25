@@ -57,4 +57,18 @@ button {
         padding: 15px 20px;
         color: $white;
     }
+
+    &.disabled{
+        background-color: $gray-6;
+        color: $black;
+        opacity: .5;
+    }
+}
+
+.disabled{
+    opacity: .5;
+}
+
+.login-btn{
+    display: block;
 }

@@ -36,8 +36,59 @@ header {
     z-index: 999;
     position: relative;
 
-    .header-user-info{
+    .header-user-info {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .user-notification {
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .user-message {
+            margin-right: 40px;
+            cursor: pointer;
+        }
+
+        .user-profile {
+            display: flex;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 20px;
+                right: 0px;
+                background-image: url('../assets/icons/down-white-arrow-icon.svg');
+                background-repeat: no-repeat;
+                width: 12px;
+                height: 7px;
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: #ffffff;
+                text-align: right;
+                padding-right: 20px;
+                padding-top: 5px;
+
+                span {
+                    display: block;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #C7C8C9;
+                }
+            }
+
+            .my-profile {
+                margin-right: 30px;
+            }
+        }
     }
 }
 
@@ -90,12 +141,12 @@ header {
             .remember {
                 display: flex;
                 justify-content: space-between;
-                
-                .rem-me{
+
+                .rem-me {
                     display: flex;
                     align-items: center;
 
-                    input{
+                    input {
                         margin-right: 10px;
                     }
                 }
@@ -161,7 +212,7 @@ header {
                     padding: 7px 0;
                     display: block;
 
-                    &.active{
+                    &.active {
                         font-weight: 700;
                     }
                 }
@@ -193,7 +244,8 @@ header {
 
     .content-area {
         // width: 100vw;
-        width: calc(100vw - 292px);;
+        width: calc(100vw - 292px);
+        ;
 
         >.card {
             margin-top: 30px;
@@ -252,23 +304,26 @@ header {
                 display: block;
             }
 
-            &.program{
-                h3{
+            &.program {
+                h3 {
                     color: #9B51E0;
                 }
             }
-            &.document{
-                h3{
+
+            &.document {
+                h3 {
                     color: #6FCF97;
                 }
             }
-            &.review{
-                h3{
+
+            &.review {
+                h3 {
                     color: #2D9CDB;
                 }
             }
-            &.unreview{
-                h3{
+
+            &.unreview {
+                h3 {
                     color: #F2994A;
                 }
             }
@@ -331,17 +386,18 @@ header {
             width: 180px;
         }
 
-        .input-field{
-            input{
+        .input-field {
+            input {
                 width: 160px;
             }
         }
     }
 
     .btn-row {
-        button{
+        button {
             margin-right: 15px;
         }
+
         button.submit {
             height: 39px;
             min-width: 111px;
@@ -366,21 +422,22 @@ header {
     }
 }
 
-.find-assign{
+.find-assign {
     .search-patient {
         display: flex;
         margin-bottom: 30px;
 
-        .input-field{
+        .input-field {
             width: 290px;
 
-            input{
+            input {
                 font-weight: 700;
             }
         }
     }
 
-    input,textarea{
+    input,
+    textarea {
         font-weight: 700;
     }
 
@@ -388,45 +445,46 @@ header {
         display: flex;
         margin-right: 40px;
 
-        button.btn-find, button.btn-secondary {
+        button.btn-find,
+        button.btn-secondary {
             height: 41px;
             margin-left: 35px;
         }
     }
 
-    .highlight-payment{
+    .highlight-payment {
         background-color: #F4F5FD;
         padding: 25px 25px 0;
     }
 }
 
-.payment-option{
+.payment-option {
     font-weight: 500;
     font-size: 14px;
 
-    .input-label{
+    .input-label {
         min-height: 19px;
     }
 
-    .field-row{
+    .field-row {
         align-items: center;
         min-height: 50px;
     }
 
-    .filter-clear{
+    .filter-clear {
         margin-top: -37px;
         margin-left: 20px;
     }
 
-    .btn-secondary{
+    .btn-secondary {
         height: auto !important;
     }
 
-    .select{
+    .select {
         min-width: 313px;
     }
 
-    .payment-card{
+    .payment-card {
         border-right: 1px solid #D4D4D4;
         margin-right: 20px;
     }
@@ -435,7 +493,7 @@ header {
 .container-card.card.find-assign {
     padding-bottom: 50px;
 
-    .message-box{
+    .message-box {
         margin-top: 30px;
     }
 }

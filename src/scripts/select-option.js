@@ -45,17 +45,25 @@ $("body").on("click", "div.autocomplete-input .btn-find", function(event){
   sessionStorage.removeItem('autocomplete-address')
 });
 
-$("body").on("keypress","input.approved-amt", function(event){
-  // $(this).val().length > 0 ? $(this).addClass('input-active') : $(this).removeClass('input-active');
-  // if(event.which >= 37 && event.which <= 40) return;
 
-  // // format number
-  // $(this).val(function(index, value) {
-  //   return value
-  //   .replace(/\D/g, "")
-  //   .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-  //   ;
-  // });
 
+$("body").on("click","#login-component a", function(event){
+  alert('sada')
+  $('.sign-in').addClass('hide');
+  $('.header-user-info').removeClass('hide');
 })
 
+$("body").on("click",".payment-card input[type='radio']", function(event){
+  $('.issue-check input[type="radio"]').prop('checked', false);
+  $('.issue-check .filter-clear').addClass('disabled').prop("disabled", true);
+  $('.payment-card .btn-secondary').prop("disabled", false).removeClass('disabled');
+  $('.select li').prop("disabled", true).addClass('disabled');
+})
+
+$("body").on("click",".issue-check input[type='radio']", function(event){
+  $('.payment-card input[type="radio"]').prop('checked', false);
+  $('.payment-card .btn-secondary').addClass('disabled').prop("disabled", true);
+  $('.issue-check .filter-clear').prop("disabled", false).removeClass('disabled');
+  $('#user').prop('onclick',null).off('click');
+  $('.select li').prop("disabled", false).removeClass('disabled');
+})
