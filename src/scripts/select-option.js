@@ -36,6 +36,7 @@ $("body").on("click", ".input-text-autocomplete li", function(event){
 
 $("body").on("click", "#wrapper", function(event){
   $('.input-text-autocomplete').hide();
+  // $('input.approved-amt').val().length > 0 ? $('input.approved-amt').addClass('input-active') : $('input.approved-amt').removeClass('input-active');
 });
 
 $("body").on("click", "div.autocomplete-input .btn-find", function(event){
@@ -44,6 +45,17 @@ $("body").on("click", "div.autocomplete-input .btn-find", function(event){
   sessionStorage.removeItem('autocomplete-address')
 });
 
-$("body").on("change","input.approved-amt", function(event){
-  $(this).val().length > 0 ? $(this).addClass('input-active') : $(this).removeClass('input-active');
+$("body").on("keypress","input.approved-amt", function(event){
+  // $(this).val().length > 0 ? $(this).addClass('input-active') : $(this).removeClass('input-active');
+  // if(event.which >= 37 && event.which <= 40) return;
+
+  // // format number
+  // $(this).val(function(index, value) {
+  //   return value
+  //   .replace(/\D/g, "")
+  //   .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+  //   ;
+  // });
+
 })
+
