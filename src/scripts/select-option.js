@@ -23,8 +23,12 @@ $("body").on("click", "div.find-assign-card div.print-file", function(event){
 });
 
 $("body").on("click", "table div.print-file", function(event){
-  
   var w = window.open($(this).closest('td').next('td').find('div.file-url').text());
+  w.print();
+});
+
+$("body").on("click", "table div.print-doc", function(event){
+  var w = window.open($(this).closest('td').next('td').find('div.doc-url').text());
   w.print();
 });
 
