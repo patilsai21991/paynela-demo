@@ -19,7 +19,7 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {program: 'Program A', reviewer:'Rep A', filetype:'FAX', fileUrl:'assets/pdf/fax.pdf', source:'Phone 876-555-4321', documentType:'EOB', reviewStatus: 'Approved', attachedTo:'Patient# 1234563', dateReceived:'03/03/2023 4:45 PM', dateProcessed:'03/04/2023 9:00 AM', docId:'1333', docUrl:'assets/pdf/fax.pdf', action:'s'},
+  {program: 'Program A', reviewer:'Rep A', filetype:'FAX', fileUrl:'assets/pdf/fax.pdf', source:'Phone 876-555-4321', documentType:'EOB', reviewStatus: 'Approved', attachedTo:'Patient# 1234563', dateReceived:'03/03/2023 4:45 PM', dateProcessed:'03/04/2023 9:00 AM', docId:'1333', docUrl:'assets/pdf/eob.pdf', action:'s'},
   {program: 'Program B', reviewer:'Rep B', filetype:'PDF', fileUrl:'assets/pdf/eob.pdf', source:'Upload', documentType:'EOB', reviewStatus: 'Approved', attachedTo:'Patient# 1234563', dateReceived:'03/03/2023 4:45 PM', dateProcessed:'03/04/2023 9:00 AM', docId:'1334', docUrl:'assets/pdf/eob.pdf', action:'s'},
   {program: 'Program C', reviewer:'Rep C', filetype:'PDF', fileUrl:'assets/pdf/eob.pdf', source:'Upload', documentType:'FAX Consent', reviewStatus: 'Approved', attachedTo:'Patient# 1234563', dateReceived:'03/03/2023 4:45 PM', dateProcessed:'03/04/2023 9:00 AM', docId:'1335', docUrl:'assets/pdf/eob.pdf', action:'s'},
   {program: 'Program D', reviewer:'Rep D', filetype:'FAX', fileUrl:'assets/pdf/fax.pdf', source:'Phone 876-555-4321', documentType:'EOB', reviewStatus: 'Not-Reviewed', attachedTo:'', dateReceived:'03/03/2023 4:45 PM', dateProcessed:'03/04/2023 9:00 AM', docId:'1336', docUrl:'assets/pdf/fax.pdf', action:'s'},
